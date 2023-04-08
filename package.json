@@ -1,0 +1,12 @@
+{
+  "name": "discord-chatbot",
+  "version": "1.0.0",
+  "description": "A chatbot for Discord using the OpenAI GPT-3 API.",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "build": "tsc",
+    "dev": "nodemon --exec ts-node src/index.ts",
+    "lint": "eslint .",
+    "test": "jest"
+  },
