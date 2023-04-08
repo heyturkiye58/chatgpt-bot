@@ -19,3 +19,14 @@ export class Bot extends Client {
     public async start(token: string) {
         await this.login(token);
     }
+private setupEvents() {
+        this.on('ready', () => {
+            console.log(`Logged in as ${this.user?.tag}!`);
+        });
+
+        this.on('interactionCreate', async (interaction) => {
+            if (!interaction.isCommand()) return;
+            this.commandHandler.handle(interaction);
+        });
+    }
+}
